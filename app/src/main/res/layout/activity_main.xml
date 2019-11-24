@@ -6,13 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/take_me_to"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+
+        android:padding="30dp"
+        android:text="Take me to..."
+
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        app:backgroundTint="@color/white"
+
+
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temiQRcode"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="5dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/find_temi"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:padding="30dp"
+
+        android:text="Find temi stores"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+
+        android:textSize="30dp"
+        app:backgroundTint="@color/white"
+
+
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_to_cart"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toEndOf="@+id/take_me_to"
+        app:layout_constraintTop_toBottomOf="@+id/temiQRcode"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="5dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_to_cart"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+
+        android:padding="30dp"
+        android:text="Login to my cart"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+
+        android:textSize="30dp"
+        app:backgroundTint="@color/white"
+
+        app:cornerRadius="15dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temiQRcode"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="5dp" />
+
+    <ImageView
+        android:id="@+id/temiQRcode"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="530dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        app:cornerRadius="15dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/temiqrcode"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="5dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

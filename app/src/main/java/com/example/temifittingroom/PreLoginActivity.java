@@ -7,26 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class PreLoginActivity extends AppCompatActivity {
 
-    Button goToPrelogin;
+    Button goTologin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pre_login);
 
-        goToPrelogin= (Button) findViewById(R.id.login_to_cart);
-        goToPrelogin.setOnClickListener(new View.OnClickListener() {
+        goTologin = findViewById(R.id.text_login);
+        goTologin.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,PreLoginActivity.class));
+                startActivity(new Intent(PreLoginActivity.this,MainActivity.class));
             }
         });
 
 
 
+
     }
-
-
-
 }
